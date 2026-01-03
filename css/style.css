@@ -58,10 +58,9 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* 👇 text ko thoda neeche shift karta hai */
-  padding-top: 140px;
+  padding-top: 180px;
 }
+
 
   padding-top: 70px;
 }
