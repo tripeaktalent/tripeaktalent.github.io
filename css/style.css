@@ -25,9 +25,13 @@ body {
 }
 
 .logo {
-  height: 125px; 
+  height: 80px;          /* clear & visible */
   width: auto;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
 }
+
 
 
 nav a {
