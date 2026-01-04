@@ -7,18 +7,19 @@
 
 /* GLOBAL */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: #0a1a2f;
   color: #ffffff;
+  line-height: 1.6;
 }
 
-/* HEADER (ONLY MENU – CLEAN LOOK) */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -29,17 +30,20 @@ body {
 .header nav a {
   color: #ffffff;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 28px;
   font-size: 14px;
+  opacity: 0.9;
 }
 
 .header nav a:hover {
   color: #00c6d7;
+  opacity: 1;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 120px 12% 80px;
   background: linear-gradient(
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)
@@ -49,80 +53,109 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 60px;
 }
 
-/* MAIN HERO LOGO (SINGLE BRAND FOCUS) */
-.hero-main-logo {
-  width: 220px;
-  padding: 16px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
+/* Hero logo (subtle) */
+.hero-logo {
+  width: 120px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6));
+}
+
+/* Hero text */
+.hero-title {
+  font-size: 44px;
+  font-weight: 600;
+  max-width: 700px;
   margin-bottom: 18px;
 }
 
-/* HERO TEXT */
-.hero-tagline {
+.hero-subtitle {
   font-size: 17px;
-  max-width: 600px;
-  margin-bottom: 30px;
-  opacity: 0.95;
+  max-width: 650px;
+  opacity: 0.9;
+  margin-bottom: 36px;
 }
 
-/* HERO BUTTONS */
-.hero-buttons a {
+/* CTA */
+.hero-cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
   background: #00c6d7;
-  color: #000000;
-  padding: 12px 26px;
-  margin: 0 8px;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
   text-decoration: none;
-  border-radius: 25px;
   font-size: 14px;
-  transition: background 0.3s;
+  font-weight: 500;
 }
 
-.hero-buttons a:hover {
+.btn-primary:hover {
   background: #00a6b5;
 }
 
-/* FOUNDER SECTION */
+.btn-secondary {
+  border: 1px solid #00c6d7;
+  color: #00c6d7;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background: rgba(0,198,215,0.1);
+}
+
+/* FOUNDER */
 .founder {
+  background: #081629;
+  padding: 90px 12%;
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 90px 10%;
-  background: #081629;
+  gap: 50px;
 }
 
 .founder img {
   width: 260px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
-.founder-content h2 {
-  margin-bottom: 15px;
+.founder-text h2 {
+  margin-bottom: 14px;
 }
 
-.founder-content p {
+.founder-text p {
   margin-bottom: 12px;
   font-size: 15px;
   opacity: 0.9;
 }
 
+.signature {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .header {
-    justify-content: center;
+  .hero {
+    padding: 120px 8% 60px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .founder {
     flex-direction: column;
     text-align: center;
-  }
-
-  .hero-main-logo {
-    width: 180px;
   }
 }
