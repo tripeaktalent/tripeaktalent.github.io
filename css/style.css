@@ -1,51 +1,43 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* GLOBAL */
 body {
   font-family: Arial, sans-serif;
   background: #0a1a2f;
-  color: white;
+  color: #ffffff;
 }
 
-/* HEADER */
+/* HEADER (ONLY MENU – CLEAN LOOK) */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
-  background: rgba(0, 0, 0, 0.6);
+  height: 60px;
+  background: rgba(0,0,0,0.75);
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
   padding: 0 40px;
   z-index: 1000;
 }
 
-.logo {
-  height: 80px;          /* clear & visible */
-  width: auto;
-  padding: 6px 10px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 6px;
-}
-
-
-
-nav a {
-  color: white;
+.header nav a {
+  color: #ffffff;
   text-decoration: none;
   margin-left: 25px;
   font-size: 14px;
 }
 
-nav a:hover {
+.header nav a:hover {
   color: #00c6d7;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   height: 100vh;
   background: linear-gradient(
@@ -53,47 +45,54 @@ nav a:hover {
       rgba(0, 0, 0, 0.65)
     ),
     url("../images/hero-banner.jpg") center/cover no-repeat;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top:220px;
+  padding-top: 60px;
 }
 
-
-  padding-top: 220px;
+/* MAIN HERO LOGO (SINGLE BRAND FOCUS) */
+.hero-main-logo {
+  width: 220px;
+  padding: 16px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  margin-bottom: 18px;
 }
 
-.hero h1 {
-  font-size: 46px;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.hero p {
+/* HERO TEXT */
+.hero-tagline {
   font-size: 17px;
-  margin-bottom: 28px;
+  max-width: 600px;
+  margin-bottom: 30px;
   opacity: 0.95;
 }
 
-
-.hero a {
+/* HERO BUTTONS */
+.hero-buttons a {
   background: #00c6d7;
-  color: black;
+  color: #000000;
   padding: 12px 26px;
   margin: 0 8px;
   text-decoration: none;
   border-radius: 25px;
   font-size: 14px;
+  transition: background 0.3s;
 }
 
-/* FOUNDER */
+.hero-buttons a:hover {
+  background: #00a6b5;
+}
+
+/* FOUNDER SECTION */
 .founder {
   display: flex;
   align-items: center;
   gap: 40px;
-  padding: 80px 10%;
+  padding: 90px 10%;
   background: #081629;
 }
 
@@ -102,32 +101,28 @@ nav a:hover {
   border-radius: 12px;
 }
 
-.founder h2 {
+.founder-content h2 {
   margin-bottom: 15px;
 }
 
-.founder p {
-  margin-bottom: 10px;
+.founder-content p {
+  margin-bottom: 12px;
   font-size: 15px;
   opacity: 0.9;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
   .founder {
     flex-direction: column;
     text-align: center;
   }
 
-  nav a {
-    margin-left: 15px;
+  .hero-main-logo {
+    width: 180px;
   }
-}
-/* HERO LOGO OVERLAY */
-.hero-logo {
-  width: 160px;              /* logo size */
-  margin-bottom: 20px;
-  background: rgba(0,0,0,0.4);
-  padding: 10px 14px;
-  border-radius: 10px;
 }
