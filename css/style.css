@@ -123,3 +123,11 @@ nav a:hover {
     margin-left: 15px;
   }
 }
+/* HERO LOGO OVERLAY */
+.hero-logo {
+  width: 160px;              /* logo size */
+  margin-bottom: 20px;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 14px;
+  border-radius: 10px;
+}
