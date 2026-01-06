@@ -186,6 +186,10 @@ body {
     font-size: 15px;
     margin-left: 18px;
   }
+.brand-name {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
 
   .founder {
     flex-direction: column;
