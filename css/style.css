@@ -40,53 +40,50 @@ body {
   opacity: 1;
 }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  padding: 120px 12% 80px;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)
+/* HERO : LOGO-BANNER IMAGE ONLY */
+.hero-image {
+  height: 100vh;
+  margin-top: 60px; /* header offset */
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.25)
     ),
-    url("../images/hero-banner.jpg") center/cover no-repeat;
+    url("../images/logo-banner.png") center/contain no-repeat;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #061423;
 }
 
-/* Hero logo (subtle) */
-.hero-logo {
-  width: 120px;
-  margin-bottom: 30px;
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6));
+/* INTRO STRIP */
+.intro {
+  padding: 90px 12%;
+  text-align: center;
+  background: #0a1a2f;
 }
 
-/* Hero text */
-.hero-title {
-  font-size: 44px;
-  font-weight: 600;
+.intro h1 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.intro p {
+  font-size: 16px;
   max-width: 700px;
-  margin-bottom: 18px;
-}
-
-.hero-subtitle {
-  font-size: 17px;
-  max-width: 650px;
+  margin: 0 auto 36px;
   opacity: 0.9;
-  margin-bottom: 36px;
 }
 
-/* CTA */
-.hero-cta {
+/* CTA BUTTONS */
+.intro-cta {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
 .btn-primary {
   background: #00c6d7;
   color: #000;
-  padding: 14px 30px;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-size: 14px;
@@ -100,7 +97,7 @@ body {
 .btn-secondary {
   border: 1px solid #00c6d7;
   color: #00c6d7;
-  padding: 14px 30px;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-size: 14px;
@@ -110,7 +107,7 @@ body {
   background: rgba(0,198,215,0.1);
 }
 
-/* FOUNDER */
+/* FOUNDER SECTION */
 .founder {
   background: #081629;
   padding: 90px 12%;
@@ -141,17 +138,21 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero {
-    padding: 120px 8% 60px;
+  .hero-image {
+    height: 70vh;
+    background-size: contain;
   }
 
-  .hero-title {
-    font-size: 34px;
+  .intro {
+    padding: 70px 8%;
   }
 
-  .hero-cta {
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro-cta {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .founder {
